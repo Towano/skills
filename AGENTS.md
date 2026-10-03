@@ -2,12 +2,16 @@
 
 ## What this repository is
 
-yspbwx2010's personal collection of [Agent Skills](https://agentskills.io/specification), written
-for their own projects and shared as they are. Each skill lives in its own top-level directory and
-installs on its own:
+[Towano/skills](https://github.com/Towano/skills) is a fork of
+[yspbwx2010/skills](https://github.com/yspbwx2010/skills). The eight
+[Agent Skills](https://agentskills.io/specification) come from upstream; this fork adapts the
+repository entry points and maintenance preferences. Each skill lives in its own top-level
+directory and installs on its own:
 
-- `npx skills add yspbwx2010/skills --skill <skill>`
-- `/plugin marketplace add yspbwx2010/skills`, then `/plugin install <skill>@yspbwx2010-skills`
+The adaptation lives on `feature/personal-guidance`; pin that branch when installing this fork:
+
+- `npx skills add 'Towano/skills#feature/personal-guidance' --skill <skill>`
+- `/plugin marketplace add Towano/skills#feature/personal-guidance`, then `/plugin install <skill>@Towano-skills`
 
 | Skill | Directory | Purpose |
 | --- | --- | --- |
@@ -21,7 +25,8 @@ installs on its own:
 | gki | [gki/](gki/AGENTS.md) | Build Android GKI (android15-6.6) kernel modules and make KMI-safe kernel changes |
 
 Before changing anything in `<skill>/`, read `<skill>/AGENTS.md`. It says what that skill is for
-and holds its rules. Run a skill's commands from its own directory.
+and holds its rules. More specific nested guidance takes precedence within its scope.
+Run a skill's commands from its own directory.
 
 ## Layout
 
@@ -46,6 +51,24 @@ tools/check_repo.py              repository layout gate, run by .github/workflow
 - Anything under `<skill>/skills/<skill>/` is copied onto users' machines on its own, so it must
   not link outside that directory.
 - `python3 tools/check_repo.py` must exit 0.
+
+### Maintainer preferences
+
+These preferences are repository maintenance context, not part of installed skills. Nested skill
+rules keep precedence in their scope.
+
+- Lead with the conclusion; keep wording concise, plain and concrete.
+- Background is not automatically a task or question. Verify facts first; ask only questions that change direction, results or action boundaries. Discussion is not execution authority.
+- Before adding anything, find equivalent implementations and identify the concrete gap.
+- Reuse code with the same responsibility; do not force unrelated work together, add frameworks just for deduplication, speculative abstractions/configuration/compatibility, or unrelated refactors.
+- Explaining a method does not prove usefulness; additions must solve a real problem.
+- Make deliverables self-contained, without correction history or rejected approaches; retain necessary reasons for the current design. Do not turn "omit X" into "no X".
+- Distinguish completed, failed and unverified work in reports.
+- Skills add domain or tool knowledge, not harness basics. Put machine-checkable requirements in existing tooling, not a new governance system.
+
+For this fork, push only to `Towano/skills` when authorized. Upstream
+[yspbwx2010/skills](https://github.com/yspbwx2010/skills) and `Towano/agent-practices` are
+reference only, not push targets.
 
 ## Adding a skill
 

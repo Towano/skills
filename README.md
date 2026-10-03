@@ -2,9 +2,11 @@
 
 简体中文 | [English](README.en.md)
 
-自用的一些 [Agent Skills](https://agentskills.io/specification), 只保证满足我自己的需求, 不做更多承诺
+[Towano/skills](https://github.com/Towano/skills) 是 [yspbwx2010/skills](https://github.com/yspbwx2010/skills) 的实验性 fork，保留上游作者提供的 8 个 [Agent Skills](https://agentskills.io/specification)，适配本 fork 的仓库入口与维护偏好。
 
 每个 skill 都可以单独安装, 按需取用即可
+
+各 skill 的文档继承自上游，可能仍使用上游安装命令；安装本 fork 时以本页命令为准。
 
 ## Skill 列表
 
@@ -21,20 +23,20 @@
 
 ## 安装
 
-> 把 `<skill>` 换成上表中的名字
+> 把 `<skill>` 换成上表中的名字。当前适配位于 `feature/personal-guidance`，以下命令固定使用该实验分支。
 
 ### 1. Skills CLI (Claude Code, Codex, Cursor, OpenCode 等 40+ 种 agent)
 
 ```bash
-npx skills add yspbwx2010/skills --skill <skill>
-npx skills add yspbwx2010/skills --list      # 查看仓库里的全部 skill
+npx skills add 'Towano/skills#feature/personal-guidance' --skill <skill>
+npx skills add 'Towano/skills#feature/personal-guidance' --list      # 查看仓库里的全部 skill
 ```
 
 ### 2. Claude Code 插件市场
 
 ```text
-/plugin marketplace add yspbwx2010/skills
-/plugin install <skill>@yspbwx2010-skills
+/plugin marketplace add Towano/skills#feature/personal-guidance
+/plugin install <skill>@Towano-skills
 ```
 
 ### 3. 手动复制
@@ -48,6 +50,8 @@ npx skills add yspbwx2010/skills --list      # 查看仓库里的全部 skill
 每个 skill 一个目录, README, 更新日志, 维护说明和工具都放在各自目录里, 安装时只复制 `<skill>/skills/<skill>/`
 
 详细结构和新增 skill 的步骤见 [AGENTS.md](AGENTS.md)
+
+根 AGENTS.md 的协作偏好仅用于维护本仓库，不随 skill 安装到其他项目。
 
 ## 许可证
 

@@ -1,9 +1,9 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "yspbwx2010-skills",
-  "description": "yspbwx2010's agent skills, one plugin per skill",
+  "name": "Towano-skills",
+  "description": "Towano's fork of yspbwx2010/skills, one plugin per skill",
   "owner": {
-    "name": "yspbwx2010"
+    "name": "Towano"
   },
   "plugins": [
     {

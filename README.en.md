@@ -2,9 +2,11 @@
 
 [简体中文](README.md) | English
 
-Some [Agent Skills](https://agentskills.io/specification) I use myself, only guaranteed to fit my own needs, nothing more promised
+[Towano/skills](https://github.com/Towano/skills) is a fork of [yspbwx2010/skills](https://github.com/yspbwx2010/skills). It keeps the eight [Agent Skills](https://agentskills.io/specification) supplied by the upstream author and adapts the fork's repository entry points and maintenance preferences.
 
 Each skill installs on its own, take only the ones you want
+
+Individual skill docs are inherited from upstream and may still show upstream installation commands. Use this page to install from the fork.
 
 ## Skill list
 
@@ -21,20 +23,20 @@ Each skill installs on its own, take only the ones you want
 
 ## Install
 
-> Replace `<skill>` with a name from the table above
+> Replace `<skill>` with a name from the table above. The current adaptation lives on `feature/personal-guidance`; the commands below pin that experimental branch.
 
 ### 1. Skills CLI (Claude Code, Codex, Cursor, OpenCode and 40+ other agents)
 
 ```bash
-npx skills add yspbwx2010/skills --skill <skill>
-npx skills add yspbwx2010/skills --list      # list every skill in the repo
+npx skills add 'Towano/skills#feature/personal-guidance' --skill <skill>
+npx skills add 'Towano/skills#feature/personal-guidance' --list      # list every skill in the repo
 ```
 
 ### 2. Claude Code plugin marketplace
 
 ```text
-/plugin marketplace add yspbwx2010/skills
-/plugin install <skill>@yspbwx2010-skills
+/plugin marketplace add Towano/skills#feature/personal-guidance
+/plugin install <skill>@Towano-skills
 ```
 
 ### 3. Manual copy
@@ -48,6 +50,8 @@ See each skill's README for other agents' directories
 One directory per skill; the README, changelog, maintenance notes and tooling all live in it, and only `<skill>/skills/<skill>/` is installed
 
 For the full layout and the steps to add a skill, see [AGENTS.md](AGENTS.md)
+
+The root AGENTS.md preferences are repository maintenance context; they are not copied with skill installs.
 
 ## License
 
