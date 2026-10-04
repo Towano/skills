@@ -51,7 +51,7 @@ npx skills add 'Towano/skills#feature/personal-guidance' --list      # 查看仓
 
 详细结构和新增 skill 的步骤见 [AGENTS.md](AGENTS.md)
 
-根 AGENTS.md 的协作偏好仅用于维护本仓库，不随 skill 安装到其他项目。
+本 fork 沿用上游的目录结构与文档规范，既有规范优先。根 AGENTS.md 的协作偏好只补充未规定的选择，仅用于维护本 fork，不随 skill 安装到其他项目。
 
 ## 许可证
 

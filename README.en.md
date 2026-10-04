@@ -51,7 +51,7 @@ One directory per skill; the README, changelog, maintenance notes and tooling al
 
 For the full layout and the steps to add a skill, see [AGENTS.md](AGENTS.md)
 
-The root AGENTS.md preferences are repository maintenance context; they are not copied with skill installs.
+This fork follows upstream's layout and documentation conventions, with existing requirements taking precedence. The root AGENTS.md preferences only supplement otherwise unspecified choices in maintaining this fork; they are not included in skill installs.
 
 ## License
 

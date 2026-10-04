@@ -54,8 +54,13 @@ tools/check_repo.py              repository layout gate, run by .github/workflow
 
 ### Maintainer preferences
 
-These preferences are repository maintenance context, not part of installed skills. Nested skill
-rules keep precedence in their scope.
+These supplementary preferences apply only to maintenance of this fork, not to installed skills.
+Follow upstream's layout and documentation conventions. Existing directory rules, domain guidance,
+checks and license terms take precedence; use preferences only for choices those requirements leave
+open, never to replace or relax them.
+
+Keep personal preferences in private guidance; project and skill guides hold concrete constraints
+and experience.
 
 - Lead with the conclusion; keep wording concise, plain and concrete.
 - Background is not automatically a task or question. Verify facts first; ask only questions that change direction, results or action boundaries. Discussion is not execution authority.
